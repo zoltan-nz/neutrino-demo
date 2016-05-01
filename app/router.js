@@ -6,7 +6,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('questions');
+  this.route('questions', function() {
+    this.route('1', {path: '/why-learn'});
+    this.route('2', {path: '/how-experienced'});
+    this.route('3', {path: '/tutorials'});
+    this.route('4', {path: '/features'});
+    this.route('5', {path: '/demographic'});
+  });
   this.route('admin');
 });
 
