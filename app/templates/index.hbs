@@ -1,16 +1,37 @@
-Why are you learning new framework, programming language?
+<form class="form" {{action 'why' whyChoice whyOther experienceChoice on='submit'}}>
+  <h3>Why are you learning new framework, programming language?</h3>
 
-Need for my work, it is part of my job.
-It is just a hobby.
-I would like a career change.
-I am already a developer and for exploring new technologies.
-Other, please specify:
+  <div class="radio">
+    {{#radio-button value="work" groupValue=whyChoice}}Need for my work, it is part of my job.{{/radio-button}}
+  </div>
+  <div class="radio">
+    {{#radio-button value="hobby" groupValue=whyChoice}}It is just a hobby.{{/radio-button}}
+  </div>
+  <div class="radio">
+    {{#radio-button value="career" groupValue=whyChoice}}I would like a career change.{{/radio-button}}
+  </div>
+  <div class="radio">
+    {{#radio-button value="exploring" groupValue=whyChoice}}I am already a developer and for exploring new
+      technologies.{{/radio-button}}
+  </div>
+  <div class="radio">
+    {{#radio-button value="other" groupValue=choice}}Other, please specify: {{input value=whyOther class="form-control"}}{{/radio-button}}
+  </div>
 
-How experienced programmer are you?
+<h3>How experienced programmer are you?</h3>
+  <div class="radio">
+    {{#radio-button value="beginner" groupValue=experienceChoice}}Beginner{{/radio-button}}
+  </div>
+  <div class="radio">
+    {{#radio-button value="intermediate" groupValue=experienceChoice}}Intermediate{{/radio-button}}
+  </div>
+  <div class="radio">
+    {{#radio-button value="experienced" groupValue=experienceChoice}}Experienced{{/radio-button}}
+  </div>
 
-Beginner
-Intermediate
-Experienced
+</form>
+
+
 
 Which tutorials have you used and how did you like it? (In a scale of 6)
 
